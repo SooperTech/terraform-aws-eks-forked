@@ -342,6 +342,12 @@ variable "node_security_group_tags" {
   default     = {}
 }
 
+variable "node_subnet_ids" {
+  description = "A map of additional tags to add to the node security group created"
+  type        = list(string)
+  default     = {}
+}
+
 ################################################################################
 # IRSA
 ################################################################################
