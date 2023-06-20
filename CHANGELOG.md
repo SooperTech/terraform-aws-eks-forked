@@ -2,6 +2,125 @@
 
 All notable changes to this project will be documented in this file.
 
+### [19.15.3](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.15.2...v19.15.3) (2023-06-09)
+
+
+### Bug Fixes
+
+* Snapshot permissions issue for Karpenter submodule ([#2649](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2649)) ([6217d0e](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/6217d0eaab4c864ec4d40a31538e78a7fbcee5e3))
+
+### [19.15.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.15.1...v19.15.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* Ensure `isra_tag_values` can be tried before defaulting to `cluster_name` on Karpenter module ([#2631](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2631)) ([6c56e2a](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/6c56e2ad20057a5672526b5484df96806598a4e2))
+
+### [19.15.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.15.0...v19.15.1) (2023-05-24)
+
+
+### Bug Fixes
+
+* Revert changes to ignore `role_last_used` ([#2629](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2629)) ([e23139a](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/e23139ad2da0c31c8aa644ae0516ba9ee2a66399))
+
+## [19.15.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.14.0...v19.15.0) (2023-05-24)
+
+
+### Features
+
+* Ignore changes to *.aws_iam_role.*.role_last_used ([#2628](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2628)) ([f8ea3d0](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/f8ea3d08adbc4abfb18a77ad44e30b93cd05c050))
+
+## [19.14.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.13.1...v19.14.0) (2023-05-17)
+
+
+### Features
+
+* Add irsa_tag_values variable ([#2584](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2584)) ([aa3bdf1](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/aa3bdf1c19747bca7067c6e49c071ae80a9ca5e5))
+
+### [19.13.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.13.0...v19.13.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* SQS queue encryption types selection ([#2575](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2575)) ([969c7a7](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/969c7a7c4340c8ed327d18f86c5e00e18190a48b))
+
+## [19.13.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.12.0...v19.13.0) (2023-04-12)
+
+
+### Features
+
+* Add support for allowed_instance_type ([#2552](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2552)) ([54417d2](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/54417d244c06b459b399e84433343af6e9934bb3))
+
+## [19.12.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.11.0...v19.12.0) (2023-03-31)
+
+
+### Features
+
+* Add Autoscaling schedule for EKS managed node group ([#2504](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2504)) ([4a2523c](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/4a2523cddd4498f3ece5aee2eedf618dd701eb59))
+
+## [19.11.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.10.3...v19.11.0) (2023-03-28)
+
+
+### Features
+
+* Add optional list of policy ARNs for attachment to Karpenter IRSA ([#2537](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2537)) ([bd387d6](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/bd387d69fac5a431a426e12de786ab80aea112a6))
+
+### [19.10.3](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.10.2...v19.10.3) (2023-03-23)
+
+
+### Bug Fixes
+
+* Add `aws_eks_addons.before_compute` to the `cluster_addons` output ([#2533](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2533)) ([f977d83](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/f977d83500ac529b09918d4e78aa8887749a8cd1))
+
+### [19.10.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.10.1...v19.10.2) (2023-03-23)
+
+
+### Bug Fixes
+
+* Add Name tag for EKS cloudwatch log group ([#2500](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2500)) ([e64a490](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/e64a490d8db4ebf495f42c542a40d7d763005873))
+
+### [19.10.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.10.0...v19.10.1) (2023-03-17)
+
+
+### Bug Fixes
+
+* Return correct status for mng ([#2524](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2524)) ([e257daf](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/e257dafe94e11384caf210d9ff21c4d3e078cb17))
+
+## [19.10.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.9.0...v19.10.0) (2023-02-17)
+
+
+### Features
+
+* Allow setting custom IRSA policy name for karpenter ([#2480](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2480)) ([8954ff7](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/8954ff7bb433358ba99b77248e3aae377d3a580b))
+
+## [19.9.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.8.0...v19.9.0) (2023-02-17)
+
+
+### Features
+
+* Add support for enabling addons before data plane compute is created ([#2478](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2478)) ([78027f3](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/78027f37e43c79748cd7528d3803122cb8072ed7))
+
+## [19.8.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.7.0...v19.8.0) (2023-02-15)
+
+
+### Features
+
+* Add auto discovery permission of cluster endpoint to Karpenter role ([#2451](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2451)) ([c4a4b8a](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/c4a4b8afe3d1e89117573e9e04aea08871a069dc))
+
+## [19.7.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.6.0...v19.7.0) (2023-02-07)
+
+
+### Features
+
+* Allow to pass prefix for rule names ([#2437](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2437)) ([68fe60f](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/68fe60f1c4e975d7f6f2c22ae891a32fd80a0156))
+
+## [19.6.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.5.1...v19.6.0) (2023-01-28)
+
+
+### Features
+
+* Add prometheus-adapter port 6443 to recommended sec groups ([#2399](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2399)) ([059dc0c](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/059dc0c67c2aebbf2c9a2f0a05856a823dd1b5a0))
+
 ### [19.5.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.5.0...v19.5.1) (2023-01-05)
 
 
@@ -249,7 +368,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* Add support for specifiying NTP address to use private Amazon Time Sync Service ([#2125](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2125)) ([4543ab4](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/4543ab454bea80b64381b88a631d955a7cfae247))
+* Add support for specifying NTP address to use private Amazon Time Sync Service ([#2125](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2125)) ([4543ab4](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/4543ab454bea80b64381b88a631d955a7cfae247))
 
 ## [18.25.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.24.1...v18.25.0) (2022-06-28)
 
@@ -270,7 +389,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* Add support for specifying conrol plane subnets separate from those used by node groups (data plane) ([#2113](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2113)) ([ebc91bc](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/ebc91bcd37a919a350d872a5b235ccc2a79955a6))
+* Add support for specifying control plane subnets separate from those used by node groups (data plane) ([#2113](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2113)) ([ebc91bc](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/ebc91bcd37a919a350d872a5b235ccc2a79955a6))
 
 ## [18.23.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.22.0...v18.23.0) (2022-06-02)
 
@@ -613,7 +732,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* Use the prefix_seperator var for node sg prefix ([#1751](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1751)) ([62879dd](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/62879dd81a69ba010f19ba9ece8392e1730b53e0))
+* Use the prefix_separator var for node sg prefix ([#1751](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1751)) ([62879dd](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/62879dd81a69ba010f19ba9ece8392e1730b53e0))
 
 ### [18.0.4](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.0.3...v18.0.4) (2022-01-07)
 
@@ -890,7 +1009,7 @@ BREAKING CHANGES:
 - The  variable `config_output_path` is renamed into `kubeconfig_output_path` for naming consistency. Please upgrade your configuration accordingly.
 
 NOTES:
-- Since we now search only for Linux or Windows AMI if there is a worker groups for the corresponding plateform, we can now define different default root block device name for each plateform. Use locals `root_block_device_name` and `root_block_device_name_windows` to define your owns.
+- Since we now search only for Linux or Windows AMI if there is a worker groups for the corresponding platform, we can now define different default root block device name for each platform. Use locals `root_block_device_name` and `root_block_device_name_windows` to define your owns.
 - The kubeconfig file permission is not world and group readable anymore. The default permission is now `600`. This value can be changed with the variable `var.kubeconfig_file_permission`.
 
 
@@ -929,7 +1048,7 @@ BUG FIXES:
 - Bump `terraform-aws-modules/http` provider version to support darwin arm64 release ([#1369](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1369))
 
 DOCS:
-- Use IRSA for Node Termination Handler IAM policy attachement in Instance Refresh example ([#1373](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1373))
+- Use IRSA for Node Termination Handler IAM policy attachment in Instance Refresh example ([#1373](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1373))
 
 
 <a name="v16.0.0"></a>
@@ -1002,7 +1121,7 @@ FEATURES:
 - Add permissions boundary to fargate execution IAM role ([#1108](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1108))
 
 ENHANCEMENTS:
-- Dont set -x in userdata to avoid printing sensitive informations in logs ([#1187](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1187))
+- Don't set -x in userdata to avoid printing sensitive information in logs ([#1187](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1187))
 
 BUG FIXES:
 - Merge tags from Fargate profiles with common tags from cluster ([#1159](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1159))
@@ -1114,7 +1233,7 @@ BREAKING CHANGES:
 NOTES:
 - `credit_specification` for worker groups launch template can now be set to `null` so that we can use non burstable EC2 families
 - Starting in v12.1.0 the `cluster_id` output depends on the
-`wait_for_cluster` null resource. This means that initialisation of the
+`wait_for_cluster` null resource. This means that initialization of the
 kubernetes provider will be blocked until the cluster is really ready,
 if the module is set to manage the aws_auth ConfigMap and user followed
 the typical Usage Example. kubernetes resources in the same plan do not
@@ -1220,7 +1339,7 @@ TESTS:
 - Remove unused kitchen test related stuff ([#787](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/787))
 
 CI:
-- Restrict sementic PR to validate PR title only ([#804](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/804))
+- Restrict semantic PR to validate PR title only ([#804](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/804))
 
 
 [Unreleased]: https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v17.23.0...HEAD
